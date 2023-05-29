@@ -1,0 +1,144 @@
+* {
+	outline:none;
+	border:none;
+}
+
+body {
+	background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(../media/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+a.arrow-button {
+	margin: 16px;
+	width: 85px;
+	text-align: center;
+	background-color: #eee;
+	padding: 0.5em 0;
+	display: block;
+	color: #333;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.2s;
+  	box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	font-family: arial;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+a.arrow-button:hover {
+	color: #eee;
+	background-color: #333;
+	text-decoration: none;
+}
+
+.arrow-home:before {
+	content: '\25c4';
+	padding-right: 0.5em;
+}
+
+#paper {
+	color:#FFF;
+	font-size:20px;
+}
+
+#margin {
+	margin-left:12px;
+	margin-bottom:20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
+	font-family:Courier, monospace;
+	font-size: 23px;
+}
+
+#text {
+	width:500px;
+	overflow:hidden;
+	background-color:#FFF;
+	color:#222;
+	font-family:Courier, monospace;
+	font-weight:normal;
+	font-size:24px;
+	resize:none;
+	line-height:40px;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:45px;
+	padding-bottom:34px;
+	background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+	background-repeat:repeat-y, repeat;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+
+#title {
+	background-color:transparent;
+	border-bottom:3px solid #FFF;
+	color:#FFF;
+	font-size:20px;
+	font-family:Courier, monospace;
+	height:28px;
+	font-weight:bold;
+	width:220px;
+}
+
+#button {
+	cursor:pointer;
+	margin-top:20px;
+	float:right;
+	height:40px;
+	padding-left:24px;
+	padding-right:24px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:20px;
+	color:#FFF;
+	text-shadow: 0px -1px 0px #000000;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border-top:1px solid #FFF;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	background-color: #ed553b;
+	background-repeat:repeat-x;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	opacity: 1;
+}
+
+#button:active {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+
+#button:hover {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+
+#wrapper {
+	width:700px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:80px;
+	margin-bottom:100px;
+}

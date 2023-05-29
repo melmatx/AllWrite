@@ -1,0 +1,220 @@
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 0.9em;
+    background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(../media/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+a.arrow-button {
+    margin: 16px;
+    width: 85px;
+    text-align: center;
+    background-color: #eee;
+    padding: 0.5em 0;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: arial;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    z-index: 9999;
+}
+
+a.arrow-button:hover {
+    color: #eee;
+    background-color: #333;
+    text-decoration: none;
+}
+
+.arrow-home:before {
+    content: '\25c4';
+    padding-right: 0.5em;
+}
+
+.comments-btn {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+a.comments-open,  a.add-open, .submit {
+    padding:10px;
+    color:#424242;
+    font-weight:bold;
+    width:100px;
+    background:#e0e0e0;
+    border-radius:5px;
+    text-align:center;
+    text-decoration:none;
+    margin-right: 10px;
+}
+
+.comments, .add {
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    transition:all .5s ease-in-out;
+    opacity:0;
+    z-index:-1;
+}
+
+.comments:target, .add:target {
+    opacity:1;
+    transition:all .5s ease-in-out;
+    z-index:+1;
+}
+
+.comments-content, .add-content {
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:500px;
+    background:#fff;
+    border-radius:4px;
+    transform:translate(-50%, -200%);
+    transition:all .5s ease-in-out;
+    perspective: 1000;
+    outline:1px solid transparent;
+    opacity:0;
+}
+
+.comments:target .comments-content, .add:target .add-content {
+    transform:translate(-50%, -50%);
+    transition:all .5s ease-in-out;
+    transition-delay:.1s;
+    z-index:9999;
+    opacity:1;
+    max-height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+
+.comments-content:target, .add-content:target {
+    transform:translate(-50%, -50%);
+    transition:all .5s ease-in-out;
+    transition-delay:.1s;
+    z-index:-9999;
+    opacity:0;
+}
+  
+.comments-close, .add-close {
+    float:right;
+    text-decoration:none;
+    padding:22px 22px;
+    color:#fff;
+    font-weight:800;
+    transition:all .5s ease-in-out;
+    z-index:+1;
+    background:rgba(0,0,0,0.1);
+    text-align:center;
+    border-radius:0 4px 0 0;
+}
+
+.comments-close:hover, .add-close:hover {
+    color:#424242;
+    background:rgba(0, 0, 0, 0.2);
+}
+
+.comments-content h3, .add-content h3 {
+    padding:20px;
+    display:block;
+    text-align:center;
+    border-bottom:1px solid #e0e0e0;
+    text-transform:uppercase;
+    background:#1a2250;
+    color:#fff;
+    border-radius:4px 4px 0 0;
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+
+.date {
+    font-size: 12px;
+    font-size: smaller;
+    margin: 5px 0px 5px 0px;
+}
+
+.add-content h3 {
+    background:#e4b55c;
+}
+
+.comments-area, .add-area {
+    padding:20px;
+}
+
+.add-area input, .add-area textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 13px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+.post-wall {
+    background: #FFF;
+    border: #e0dfdf 1px solid;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 50px auto;
+    width: 500px;
+    overflow: hidden;
+}
+
+.post-item {
+    padding: 20px;
+    border: #f3f3f3 2px solid;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.post-item p {
+    word-wrap: break-word;
+    line-height: 1.6rem;
+}
+
+.post-title {
+    color: #204754;
+    font-size: 1.4rem;
+}
+
+.ajax-loader {
+    display: block;
+    text-align: center;
+}
+.ajax-loader img {
+    width: 50px;
+    vertical-align: middle;
+}
+
+[data-scroll] {
+  opacity: 0;
+  will-change: transform, scale, opacity;
+  transform: translateY(6rem) scale(0.93);
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-scroll=in] {
+  opacity: 1;
+  transform: translateY(0);
+}
